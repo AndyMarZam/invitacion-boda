@@ -419,19 +419,25 @@
 
 <script>
 
-<!-- const audio=document.getElementById("audio");-->
 
-const boton=document.getElementById("playMusic");
+// =========================
+// CONTROL DE LA MÚSICA
+// =========================
 
-const icono=document.getElementById("icono");
+const audio = document.getElementById("audio");
 
-boton.addEventListener("click",()=>{
+const boton = document.getElementById("playMusic");
+
+const icono = document.getElementById("icono");
+
+
+boton.addEventListener("click", () => {
 
     if(audio.paused){
 
         audio.play();
 
-        icono.innerHTML="❚❚";
+        icono.innerHTML = "❚❚";
 
         boton.classList.add("playing");
 
@@ -439,7 +445,7 @@ boton.addEventListener("click",()=>{
 
         audio.pause();
 
-        icono.innerHTML="▶";
+        icono.innerHTML = "▶";
 
         boton.classList.remove("playing");
 
@@ -447,13 +453,69 @@ boton.addEventListener("click",()=>{
 
 });
 
-</script>
+
+// PAUSAR LA MÚSICA AL SALIR DE LA INVITACIÓN
+
+// =========================
+// PAUSAR Y REANUDAR LA CANCIÓN
+// =========================
+
+let cancionEstabaReproduciendose = false;
+
+document.addEventListener("visibilitychange", () => {
+
+    if(document.hidden){
+
+        // Recordar si la canción estaba reproduciéndose
+        cancionEstabaReproduciendose = !audio.paused;
+
+        // Guardar la posición actual
+        localStorage.setItem(
+            "posicionCancion",
+            audio.currentTime
+        );
+
+        // Pausar al salir
+        audio.pause();
+
+        icono.innerHTML = "▶";
+
+        boton.classList.remove("playing");
+
+    }else{
+
+        // Si la canción estaba reproduciéndose antes de salir
+        if(cancionEstabaReproduciendose){
+
+            const posicionGuardada =
+                localStorage.getItem("posicionCancion");
+
+            if(posicionGuardada !== null){
+
+                audio.currentTime =
+                    parseFloat(posicionGuardada);
+
+            }
+
+            audio.play();
+
+            icono.innerHTML = "❚❚";
+
+            boton.classList.add("playing");
+
+        }
+
+    }
+
+});
 
 
-
-<script>
+// =========================
+// CONTADOR REGRESIVO
+// =========================
 
 const fechaBoda = new Date(2026, 8, 11, 19, 15, 0).getTime();
+
 
 function actualizarContador(){
 
@@ -461,26 +523,73 @@ function actualizarContador(){
 
     const diferencia = fechaBoda - ahora;
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    if(diferencia <= 0){
 
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        document.getElementById("dias").innerHTML = "00";
 
-    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        document.getElementById("horas").innerHTML = "00";
+
+        document.getElementById("minutos").innerHTML = "00";
+
+        document.getElementById("segundos").innerHTML = "00";
+
+        return;
+
+    }
+
+
+    const dias = Math.floor(
+
+        diferencia / (1000 * 60 * 60 * 24)
+
+    );
+
+
+    const horas = Math.floor(
+
+        (diferencia % (1000 * 60 * 60 * 24))
+
+        / (1000 * 60 * 60)
+
+    );
+
+
+    const minutos = Math.floor(
+
+        (diferencia % (1000 * 60 * 60))
+
+        / (1000 * 60)
+
+    );
+
+
+    const segundos = Math.floor(
+
+        (diferencia % (1000 * 60))
+
+        / 1000
+
+    );
+
 
     document.getElementById("dias").innerHTML = dias;
+
     document.getElementById("horas").innerHTML = horas;
+
     document.getElementById("minutos").innerHTML = minutos;
+
     document.getElementById("segundos").innerHTML = segundos;
 
 }
 
+
 actualizarContador();
 
-setInterval(actualizarContador,1000);
+setInterval(actualizarContador, 1000);
 
-</script>
+
+</script> 
 
 </body>
 
