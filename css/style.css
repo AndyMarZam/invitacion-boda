@@ -1,0 +1,1280 @@
+.hero{
+
+    position:relative;
+    width:100%;
+    height:68vh;
+    overflow:hidden;
+
+}
+
+
+.hero-photo{
+
+    position:relative;
+    width:100%;
+    height:100%;
+
+}
+
+.hero-photo img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    animation:zoomHero 25s ease-in-out infinite alternate;
+
+}
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+.papel-rasgado{
+
+    position:absolute;
+    left:0;
+    bottom:-110px;
+    width:100%;
+    height:auto;
+    z-index:20;
+    pointer-events:none;
+    
+}
+
+.intro{
+
+    background:url("../img/papel-textura.png");
+    background-size:cover;
+
+    padding:0px 30px 70px;
+
+    text-align:center;
+
+}
+
+.intro h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3.2rem;
+
+    font-weight:400;
+
+    color:#2d2d2d;
+
+    margin:0;
+
+}
+
+.ampersand{
+
+    font-family:'Allura',cursive;
+
+    color:#C6A36A;
+
+    font-size:4rem;
+
+    margin:5px 0;
+
+}
+
+.intro h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:400;
+
+    margin:0;
+
+    color:#2d2d2d;
+
+}
+
+.linea{
+
+    width:120px;
+
+    height:1px;
+
+    background:#c5b08b;
+
+    margin:30px auto;
+
+}
+
+.nos-casamos{
+
+    font-family:'Montserrat',sans-serif;
+
+    letter-spacing:8px;
+
+    font-size:.9rem;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+.fecha{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    color:#444;
+
+}
+
+.scroll{
+
+    margin-top:50px;
+
+    color:#777;
+
+    font-family:'Montserrat',sans-serif;
+
+}
+
+.scroll{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.scroll span{
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+}
+
+/*=================================
+  SEPARADOR
+=================================*/
+
+.separador{
+
+    background-image:url("../img/papel-textura.png");
+    background-repeat:repeat;
+    background-size:700px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:0px 0 0px;
+
+}
+
+.divider{
+
+    width:450px;      /* antes 180px */
+    max-width:75%;
+    height:auto;
+
+    opacity:.95;
+
+}
+
+.divider:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =============== CODIGO PARA LA CANCION ===================*/
+
+.historia{
+
+    background-image:url("../img/papel-textura.png");
+    background-repeat:repeat;
+    background-size:700px;
+
+    text-align:center;
+
+    padding:5px 35px 90px;
+
+}
+
+
+
+.subtitulo{
+
+    font-family:'Montserrat',sans-serif;
+
+    letter-spacing:6px;
+
+    font-size:.75rem;
+
+    color:#8d7b65;
+
+    margin-bottom:18px;
+
+}
+
+.titulo-cancion{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    color:#2b2b2b;
+
+    margin:0;
+
+}
+
+.artista{
+
+    font-family:'Allura',cursive;
+
+    font-size:2rem;
+
+    color:#b68c53;
+
+    margin-top:8px;
+
+    margin-bottom:35px;
+
+}
+
+.music-btn{
+
+    width:85px;
+
+    height:85px;
+
+    border-radius:50%;
+
+    border:2px solid #C7A46A;
+
+    background:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.music-btn:hover{
+
+    transform:scale(1.08);
+
+}
+
+.linea-dorada{
+
+    width:90px;
+
+    height:2px;
+
+    background:#C7A46A;
+
+    margin:45px auto;
+
+}
+
+.frase{
+
+    font-family:'Allura',cursive;
+
+    font-size:2.2rem;
+
+    line-height:1.6;
+
+    color:#8b8176;
+
+}
+
+.flores-centro{
+
+    width:320px;
+
+    margin:25px auto;
+
+    display:block;
+
+}
+
+.texto2{
+
+    font-family:'Allura',cursive;
+
+    font-size:2.2rem;
+
+    line-height:1.6;
+
+    color:#8b8176;
+
+}
+
+.playing{
+
+    animation:pulse 2s infinite;
+
+}
+
+/*=================================
+  SEPARADOR
+=================================*/
+
+.separador{
+
+    background-image:url("../img/papel-textura.png");
+    background-repeat:repeat;
+    background-size:700px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:0px 0 0px;
+
+}
+
+.divider{
+
+    width:600px;      /* antes 180px */
+    max-width:75%;
+    height:auto;
+
+    opacity:.95;
+
+}
+
+.divider:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =================== FAMILIA =====================*/
+
+.familia{
+    background:url("../img/papel-textura.png") center/cover;
+    text-align:center;
+    padding:5px 0px;
+}
+
+.familia h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;
+    margin-bottom:55px;
+}
+
+.bloque{
+    margin-bottom:45px;
+}
+
+.bloque h3,
+.padrinos h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:24px;
+    color:#9a9a9a;
+    margin-bottom:18px;
+}
+
+.bloque p,
+.padrinos p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    margin:8px 0;
+}
+
+.ampersand{
+    font-family:'Allura',cursive;
+    font-size:90px;
+    color:#c8a56a;
+    margin:20px 0;
+}
+
+.padrinos{
+    margin-top:60px;
+}
+
+
+.invitacion-final{
+    margin-top: 55px;
+    text-align:center;
+}
+
+.texto-superior{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.3rem;
+    color:#8e8e8e;
+    font-style:italic;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.titulo-boda{
+
+    font-family:'Allura', cursive;
+
+    font-size:25rem;
+
+    font-weight:600;
+
+    color:#6f6a65;
+
+    line-height:1;
+
+    margin:0;
+
+}
+
+/*=================================
+      FOTO ANILLOS
+=================================*/
+
+.anillos{
+
+    position: relative;
+
+    width: 100vw;
+
+    margin-left: calc(50% - 50vw);
+
+    margin-right: calc(50% - 50vw);
+
+    overflow: hidden;
+
+    padding: 0;
+
+}
+
+.foto-anillos{
+
+    display:block;
+
+    width:100%;
+
+    height:72vh;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+.anillos::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.28) 0%,
+            rgba(0,0,0,0) 22%,
+            rgba(0,0,0,0) 78%,
+            rgba(0,0,0,.28) 100%
+        );
+
+    pointer-events:none;
+
+}
+
+/*=================================
+        CUENTA REGRESIVA
+=================================*/
+
+.contador{
+
+    background:url("../img/papel-textura.png") center/cover;
+
+    text-align:center;
+
+    padding:80px 25px;
+
+}
+
+.contador-subtitulo{
+
+    font-family:'Montserrat',sans-serif;
+
+    letter-spacing:6px;
+
+    font-size:.75rem;
+
+    color:#9b8d7a;
+
+    margin-bottom:18px;
+
+}
+
+.contador-titulo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:400;
+
+    color:#2d2d2d;
+
+    margin-bottom:55px;
+
+}
+
+.contador-texto{
+
+    font-family:'Allura',cursive;
+    font-size:2.3rem;
+    color:#9a8b78;
+    margin-top:45px;
+    margin-bottom:20px;
+
+}
+
+#countdown{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+
+}
+
+.time-box{
+
+    width:78px;
+    height:95px;
+
+    background:rgba(255,255,255,.55);
+
+    backdrop-filter:blur(8px);
+
+    border:1px solid rgba(198,163,106,.35);
+
+    border-radius:20px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.time-box span{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.2rem;
+    color:#4a443d;
+    line-height:1;
+
+}
+
+.time-box small{
+
+    margin-top:10px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.70rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    color:#8f8579;
+
+}
+
+.contador-linea{
+
+    margin-top:20px;
+}
+
+.flores-transicion{
+
+    width:450px;
+
+    display:block;
+
+    margin:45px auto 45px;
+
+    opacity:.9;
+
+}
+
+
+/*=================================
+        CEREMONIA
+=================================*/
+
+.ceremonia{
+
+    background:url("../img/papel-textura.png") center/cover;
+
+    text-align:center;
+
+    padding:80px 30px;
+
+}
+
+ .icono-catedral{
+
+    width:170px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+.titulo-seccion{
+
+    font-family:'Montserrat',sans-serif;
+
+    letter-spacing:6px;
+
+    font-size:.8rem;
+
+    color:#9b8d7a;
+
+    margin-bottom:25px;
+
+}
+
+.nombre-lugar{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:400;
+
+    color:#2f2f2f;
+
+    margin:20px 0 10px;
+
+}
+
+.hora{
+
+    font-family:'Allura',cursive;
+
+    font-size:2.2rem;
+
+    color:#b69460;
+
+    margin-bottom:35px;
+
+}
+
+.boton-mapa{
+
+    display:inline-block;
+
+    padding:14px 38px;
+
+    border:1px solid #C6A36A;
+
+    border-radius:40px;
+
+    color:#6b6259;
+
+    text-decoration:none;
+
+    font-family:'Montserrat',sans-serif;
+
+    letter-spacing:2px;
+
+    transition:.35s;
+
+}
+
+.boton-mapa:hover{
+
+    background:#C6A36A;
+
+    color:white;
+
+}
+
+
+/*=================================
+        RECEPCIÓN
+=================================*/
+
+.recepcion{
+
+    background:url("../img/papel-textura.png") center/cover;
+
+    text-align:center;
+
+    padding:10px 0px 10px;
+
+}
+
+.icono-copas{
+
+    width:150px;
+
+    display:block;
+
+    margin:0 auto 20px;
+
+}
+
+
+.divider{
+
+    width:700px;
+
+    max-width:85%;
+
+    height:auto;
+
+}
+
+
+/*=================================
+        DRESS CODE
+=================================*/
+
+.dress-code{
+
+    background:url("../img/papel-textura.png") center/cover;
+
+    padding:1px 30px;
+
+    text-align:center;
+
+}
+
+.titulo-dress{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    font-weight:400;
+
+    color:#2f2f2f;
+
+    margin:20px 0 45px;
+
+}
+
+.colores{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:45px;
+
+    margin-bottom:45px;
+
+    flex-wrap:wrap;
+
+}
+
+.color-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.circulo{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:4px solid rgba(255,255,255,.8);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.verde{
+
+    background:#1E5C49;
+
+}
+
+.gris{
+
+    background:#8E8E8E;
+
+}
+
+.color-box span{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:.8rem;
+
+    letter-spacing:1px;
+
+    color:#666;
+
+}
+
+.texto-dress{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.45rem;
+
+    color:#7d756d;
+
+    line-height:1.8;
+
+    max-width:340px;
+
+    margin:auto;
+
+}
+
+/* =========================
+   MESA DE REGALOS
+========================= */
+
+.mesa-regalos{
+
+    background-image:url("../img/papel-textura.png");
+    background-repeat:repeat;
+    background-size:700px;
+
+    text-align:center;
+
+    padding:80px 35px 90px;
+
+}
+
+/* Título */
+
+.mesa-regalos .subtitulo{
+
+    font-family:'Montserrat', sans-serif;
+
+    letter-spacing:6px;
+
+    font-size:.85rem;
+
+    color:#8d7b65;
+
+    margin-bottom:35px;
+
+}
+
+/* Texto */
+
+.mensaje-regalo{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:1.5rem;
+
+    line-height:1.5;
+
+    color:#77716b;
+
+    margin:18px auto;
+
+    max-width:380px;
+
+}
+
+/* Sobre */
+
+.sobre-regalo{
+
+    width:180px;
+
+    max-width:60%;
+
+    margin:35px auto 25px;
+
+    display:block;
+
+}
+
+/* Texto lluvia de sobres */
+
+.lluvia-sobres{
+
+    font-family:'Montserrat', sans-serif;
+
+    letter-spacing:5px;
+
+    font-size:.85rem;
+
+    color:#8d7b65;
+
+    margin-top:20px;
+
+}
+
+/* =========================
+   CORTE DECORATIVO DE FLORES
+========================= */
+
+.corte-flores{
+
+    background-image:url("../img/papel-textura.png");
+
+    background-repeat:repeat;
+
+    background-size:700px;
+
+    text-align:center;
+
+    padding:55px 20px;
+
+}
+
+.corte-flores img{
+
+    width:260px;
+
+    max-width:75%;
+
+    display:block;
+
+    margin:0 auto;
+
+}
+/* =========================
+   CORTE DECORATIVO DE FLORES
+========================= */
+
+.corte-flores{
+
+    background-image:url("../img/papel-textura.png");
+
+    background-repeat:repeat;
+
+    background-size:700px;
+
+    text-align:center;
+
+    padding:55px 20px;
+
+}
+
+.corte-flores img{
+
+    width:700px;
+
+    max-width:95%;
+
+    display:block;
+
+    margin:0 auto;
+
+}
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+
+.mensaje-final{
+
+    background-image:url("../img/papel-textura.png");
+
+    background-repeat:repeat;
+
+    background-size:700px;
+
+    text-align:center;
+
+    padding:70px 25px 45px;
+
+}
+
+.mensaje-final h2{
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:5rem;
+
+    font-weight:400;
+
+    color:#7d756d;
+
+    margin:0 0 10px;
+
+}
+
+.mensaje-final p{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:2rem;
+
+    line-height:1.3;
+
+    color:#7d756d;
+
+    margin:0;
+
+}
+
+
+/* =========================
+   FOTO FINAL
+========================= */
+
+.foto-final{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    margin:0;
+
+    overflow:hidden;
+
+}
+
+
+
+/* FOTO */
+
+.foto-final img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/* SOMBREADO SUAVE */
+
+.foto-final::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        rgba(0,0,0,0.05),
+
+        rgba(0,0,0,0.45)
+
+    );
+
+    pointer-events:none;
+
+}
+
+
+/* TEXTO SOBRE LA FOTO */
+
+.texto-foto{
+
+    position:absolute;
+
+    z-index:2;
+
+    bottom:70px;
+
+    left:0;
+
+    width:100%;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+.nombre-final{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:2.4rem;
+
+    margin:8px 0;
+
+}
+
+
+.ampersand-final{
+
+    font-family:'Allura', cursive;
+
+    font-size:4rem;
+
+    line-height:1;
+
+    margin:5px 0;
+
+}
+
+
+.fecha-final{
+
+    position:relative;
+
+    z-index:5;
+
+    background-image:url("../img/papel-textura.png");
+
+    background-repeat:repeat;
+
+    background-size:700px;
+
+    font-family:'Montserrat', sans-serif;
+
+    font-size:1rem;
+
+    letter-spacing:6px;
+
+    color:#7d756d;
+
+    text-align:center;
+
+    margin:-1px 0 0 0;
+
+    padding:20px 20px 5px;
+
+    line-height:1.2;
+
+}
+
+html,
+body{
+
+    margin:0;
+
+    padding:0;
+
+    overflow-x:hidden;
+
+}
+
+
+/* FORZAR FOTO FINAL A TODO EL ANCHO */
+
+.foto-final{
+
+    position:relative;
+
+    width:100vw;
+
+    height:100vh;
+
+    margin-left:calc(50% - 50vw);
+
+    overflow:hidden;
+
+}
+
+
+/* =========================
+   AJUSTES GENERALES
+========================= */
+
+
+
+
+
+@font-face{
+
+    font-family:"Brittany";
+
+    src:url("../fonts/BrittanySignature.ttf");
+
+}
+
+
+@keyframes pulse{
+
+    0%{
+
+        box-shadow:0 0 0 0 rgba(199,164,106,.6);
+
+    }
+
+    70%{
+
+        box-shadow:0 0 0 18px rgba(199,164,106,0);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 0 rgba(199,164,106,0);
+
+    }
+
+}
+
+@keyframes zoomHero{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
