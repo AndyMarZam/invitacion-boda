@@ -24,8 +24,6 @@ function actualizarContador(){
     document.getElementById("minutos").innerHTML=minutos;
     document.getElementById("segundos").innerHTML=segundos;
 
-    
-
 }
 
 actualizarContador();
@@ -33,9 +31,45 @@ actualizarContador();
 setInterval(actualizarContador,1000);
 
 
+// =========================
+// CONTROL DE LA MÚSICA
+// =========================
+
+const audio = document.getElementById("audio");
+
+const boton = document.getElementById("playMusic");
+
+const icono = document.getElementById("icono");
+
+
+boton.addEventListener("click", () => {
+
+    if(audio.paused){
+
+        audio.play();
+
+        icono.innerHTML = "❚❚";
+
+        boton.classList.add("playing");
+
+    }else{
+
+        audio.pause();
+
+        icono.innerHTML = "▶";
+
+        boton.classList.remove("playing");
+
+    }
+
+});
+
+
+// PAUSAR LA MÚSICA AL SALIR DE LA PÁGINA
+
 document.addEventListener("visibilitychange", () => {
 
-    if (document.hidden && !audio.paused) {
+    if(document.hidden && !audio.paused){
 
         audio.pause();
 
