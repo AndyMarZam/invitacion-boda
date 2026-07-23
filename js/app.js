@@ -24,8 +24,25 @@ function actualizarContador(){
     document.getElementById("minutos").innerHTML=minutos;
     document.getElementById("segundos").innerHTML=segundos;
 
+    
+
 }
 
 actualizarContador();
 
 setInterval(actualizarContador,1000);
+
+
+document.addEventListener("visibilitychange", () => {
+
+    if (document.hidden && !audio.paused) {
+
+        audio.pause();
+
+        icono.innerHTML = "▶";
+
+        boton.classList.remove("playing");
+
+    }
+
+});
