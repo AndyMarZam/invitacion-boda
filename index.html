@@ -419,25 +419,19 @@
 
 <script>
 
+<!-- const audio=document.getElementById("audio");-->
 
-// =========================
-// CONTROL DE LA MÚSICA
-// =========================
+const boton=document.getElementById("playMusic");
 
-const audio = document.getElementById("audio");
+const icono=document.getElementById("icono");
 
-const boton = document.getElementById("playMusic");
-
-const icono = document.getElementById("icono");
-
-
-boton.addEventListener("click", () => {
+boton.addEventListener("click",()=>{
 
     if(audio.paused){
 
         audio.play();
 
-        icono.innerHTML = "❚❚";
+        icono.innerHTML="❚❚";
 
         boton.classList.add("playing");
 
@@ -445,7 +439,7 @@ boton.addEventListener("click", () => {
 
         audio.pause();
 
-        icono.innerHTML = "▶";
+        icono.innerHTML="▶";
 
         boton.classList.remove("playing");
 
@@ -453,30 +447,13 @@ boton.addEventListener("click", () => {
 
 });
 
-
-// PAUSAR LA MÚSICA AL SALIR DE LA INVITACIÓN
-
-document.addEventListener("visibilitychange", () => {
-
-    if(document.hidden && !audio.paused){
-
-        audio.pause();
-
-        icono.innerHTML = "▶";
-
-        boton.classList.remove("playing");
-
-    }
-
-});
+</script>
 
 
-// =========================
-// CONTADOR REGRESIVO
-// =========================
+
+<script>
 
 const fechaBoda = new Date(2026, 8, 11, 19, 15, 0).getTime();
-
 
 function actualizarContador(){
 
@@ -484,71 +461,24 @@ function actualizarContador(){
 
     const diferencia = fechaBoda - ahora;
 
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
-    if(diferencia <= 0){
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-        document.getElementById("dias").innerHTML = "00";
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
 
-        document.getElementById("horas").innerHTML = "00";
-
-        document.getElementById("minutos").innerHTML = "00";
-
-        document.getElementById("segundos").innerHTML = "00";
-
-        return;
-
-    }
-
-
-    const dias = Math.floor(
-
-        diferencia / (1000 * 60 * 60 * 24)
-
-    );
-
-
-    const horas = Math.floor(
-
-        (diferencia % (1000 * 60 * 60 * 24))
-
-        / (1000 * 60 * 60)
-
-    );
-
-
-    const minutos = Math.floor(
-
-        (diferencia % (1000 * 60 * 60))
-
-        / (1000 * 60)
-
-    );
-
-
-    const segundos = Math.floor(
-
-        (diferencia % (1000 * 60))
-
-        / 1000
-
-    );
-
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
 
     document.getElementById("dias").innerHTML = dias;
-
     document.getElementById("horas").innerHTML = horas;
-
     document.getElementById("minutos").innerHTML = minutos;
-
     document.getElementById("segundos").innerHTML = segundos;
 
 }
 
-
 actualizarContador();
 
-setInterval(actualizarContador, 1000);
-
+setInterval(actualizarContador,1000);
 
 </script>
 
